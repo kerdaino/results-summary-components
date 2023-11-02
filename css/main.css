@@ -1,0 +1,114 @@
+/* desktop styles 1440px */
+
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ }
+
+ main{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    border-radius: 20px;
+ }
+
+ .side-1{
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+ }
+
+ .score{
+    padding: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 100%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+ }
+
+ .big{
+    font-weight: bold;
+    font-size: 60px;
+ }
+
+ .side-2{
+    width: 50%;
+    padding: 20px;
+    box-shadow: inset 0px 0px 0px 0.5px ;
+    border-radius: 20px;
+ }
+
+ .list{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .list1{
+    display: flex;
+    justify-content: space-around;
+    background: hsla(0, 100%, 67%,0.1);
+    color: hsl(0, 100%, 67%);
+    margin-bottom: 15px;
+    padding: 10px;
+ }
+
+ .list2{
+    display: flex;
+    justify-content: space-around;
+    background:  hsla(39, 100%, 56%,0.1);
+    color:  hsl(39, 100%, 56%);
+    margin-bottom: 15px;
+    padding: 10px;
+ }
+
+ .list3{
+    display: flex;
+    justify-content: space-around;
+    background:  hsla(166, 100%, 37%,0.1);
+    color:  hsl(166, 100%, 37%);
+    margin-bottom: 15px;
+    padding: 10px; 
+}
+
+.list4{
+    display: flex;
+    justify-content: space-around;
+    background:  hsla(234, 85%, 45%,0.1);
+    color:  hsl(234, 85%, 45%);
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.black{
+    font-weight: bold;
+    color: black;
+}
+
+.light{
+    font-weight: 400;
+    color: grey;
+}
+
+button{
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+button:hover{
+    cursor: pointer;
+    background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    transition: 0.5s;
+}
