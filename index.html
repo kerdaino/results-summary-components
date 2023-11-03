@@ -1,65 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Defines the document type -->
+<html lang="en"> <!-- Starts the HTML document with English as the language -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive design -->
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <link rel="stylesheet" href="css/main.css">
-  
-  <title>Frontend Mentor | Results summary component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> <!-- Links the favicon (website icon) -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/main.css"> <!-- Links an external CSS stylesheet -->
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet"> <!-- Links a Google Font -->
+
+  <title>Frontend Mentor | Results summary component</title> <!-- Sets the title of the page -->
 </head>
+
 <body>
   <main>
-  <section class="side-1">
-    <h4 class="title">Your Result</h4>
-      <p class="score"><span class="big">76</span>of 100</p>
-    <div>
-      <h3>Great</h3>
-    <p>You scored higher than 65% of the people who have taken these tests.</p>
+    <section class="side-1">
+      <h4 class="title">Your Result</h4> <!-- Heading for the result section -->
+      <p class="score"><span class="big">76</span>of 100</p> <!-- Displays the score -->
+      <div>
+        <h3>Great</h3> <!-- Displaying a message -->
+        <p>You scored higher than 65% of the people who have taken these tests.</p> <!-- Displaying a message -->
+      </div>
+    </section>
+    <section class="side-2">
+      <h4>Summary</h4> <!-- Heading for the summary section -->
+      <div class="list">
+        <div class="list1">
+          <div class="list-con"><img src="./assets/images/icon-reaction.svg" alt="lighting-sign">
+            <span>Reaction</span>
+          </div>
+          <span class="black">80 <span class="light">/ 100</span></span> <!-- Displays a score -->
+        </div>
+        <div class="list2">
+          <div class="list-con"><img src="./assets/images/icon-memory.svg" alt="brain">
+            <span>Memory</span>
+          </div>
+          <span class="black">92 <span class="light">/ 100</span></span> <!-- Displays a score -->
+        </div>
+        <div class="list3">
+          <div class="list-con"><img src="./assets/images/icon-verbal.svg" alt="chat-icon">
+            <span>Verbal</span>
+          </div>
+          <span class="black">61 <span class="light">/ 100</span></span> <!-- Displays a score -->
+        </div>
+        <div class="list4">
+          <div class="list-con"><img src="./assets/images/icon-visual.svg" alt="eye-icon">
+            <span>Visual</span>
+          </div>
+          <span class="black">72 <span class="light">/ 100</span></span> <!-- Displays a score -->
+        </div>
+        <button>Continue</button> <!-- A button for user interaction -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <!-- Attribution link to Frontend Mentor -->
+      Coded by <a href="https://kerdaino.github.io/portfolio/" target="_blank">Tobi Adekunle(kerdaino dev)</a>. <!-- Attribution link to the coder -->
     </div>
-  </section>
-  <section class="side-2">
-    <h4>Summary</h4>
-    <div class="list">
-      <div class="list1">
-        <div class="list-con"><img src="./assets/images/icon-reaction.svg" alt="lighting-sign">
-          <span>Reaction</span>
-        </div>
-        <span class="black">80 <span class="light">/ 100</span></span>
-      </div>
-      <div class="list2">
-        <div class="list-con"><img src="./assets/images/icon-memory.svg" alt="brain">
-          <span>Memory</span>
-        </div>
-        <span class="black">92 <span class="light">/ 100</span></span>
-      </div>
-      <div class="list3">
-        <div class="list-con"><img src="./assets/images/icon-verbal.svg" alt="chat-icon">
-          <span>Verbal</span>
-        </div>
-        <span class="black">61 <span class="light">/ 100</span></span>
-      </div>
-      <div class="list4">
-        <div class="list-con"><img src="./assets/images/icon-visual.svg" alt="eye-icon">
-          <span>Visual</span>
-        </div>
-        <span class="black">72 <span class="light">/ 100</span></span>
-      </div>
-      <button>Continue</button>
-    </div>
-  </section>
-</main>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  </footer>
 </body>
+
 </html>

@@ -1,114 +1,164 @@
-/* desktop styles 1440px */
+/* global styles */
 
- body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
- }
+body{
+   font-family: 'Hanken Grotesk', sans-serif; /* Sets the font family for the entire document */
+   font-size: 18px; /* Sets the base font size */
+}
 
- main{
-    display: flex;
-    width: 600px;
-    justify-content: center;
-    border-radius: 20px;
- }
+h4,p{
+   color: hsl(241, 100%, 89%); /* Sets color for h4 and p elements */
+}
 
- .side-1{
-    color: hsl(0, 0%, 100%);
-    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
-    padding: 20px;
-    border-radius: 20px;
-    width: 50%;
-    text-align: center;
- }
+.big{
+   color: hsl(0, 0%, 100%); /* Sets color for elements with class 'big' */
+}
 
- .score{
-    padding: 50px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    border-radius: 100%;
-    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
- }
+.side-2 h4{
+   color: hsl(224, 30%, 27%); /* Sets color for h4 elements within .side-2 section */
+}
 
- .big{
-    font-weight: bold;
-    font-size: 60px;
- }
+.score{
+   padding: 50px; /* Adds padding */
+   width: 80px; /* Sets width */
+   height: 80px; /* Sets height */
+   display: flex; /* Displays as a flexbox */
+   align-items: center; /* Aligns items to the center */
+   justify-content: center; /* Centers content */
+   flex-direction: column; /* Arranges items in a column */
+   margin: 0 auto; /* Centers horizontally */
+   border-radius: 100%; /* Creates a circular shape */
+   background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0)); /* Applies a gradient background */
+}
 
- .side-2{
-    width: 50%;
-    padding: 20px;
-    box-shadow: inset 0px 0px 0px 0.5px ;
-    border-radius: 20px;
- }
+.big{
+   font-weight: bold; /* Sets font weight to bold */
+   font-size: 60px; /* Sets font size */
+}
 
- .list{
-    display: flex;
-    flex-direction: column;
- }
+.side-2{
+   padding: 20px; /* Adds padding */
+   border-radius: 20px; /* Adds rounded corners */
+}
 
- .list1{
-    display: flex;
-    justify-content: space-around;
-    background: hsla(0, 100%, 67%,0.1);
-    color: hsl(0, 100%, 67%);
-    margin-bottom: 15px;
-    padding: 10px;
- }
+.list{
+   display: flex; /* Displays as a flexbox */
+   flex-direction: column; /* Arranges items in a column */
+}
 
- .list2{
-    display: flex;
-    justify-content: space-around;
-    background:  hsla(39, 100%, 56%,0.1);
-    color:  hsl(39, 100%, 56%);
-    margin-bottom: 15px;
-    padding: 10px;
- }
+.list1, .list2, .list3, .list4{
+   display: flex; /* Displays as a flexbox */
+   justify-content: space-around; /* Distributes items evenly */
+   background: hsla(0, 100%, 67%,0.1); /* Sets background color with transparency */
+   color: hsl(0, 100%, 67%); /* Sets text color */
+   margin-bottom: 15px; /* Adds margin at the bottom */
+   padding:10px 0; /* Adds padding */
+   border-radius: 10px; /* Adds rounded corners */
+}
 
- .list3{
-    display: flex;
-    justify-content: space-around;
-    background:  hsla(166, 100%, 37%,0.1);
-    color:  hsl(166, 100%, 37%);
-    margin-bottom: 15px;
-    padding: 10px; 
+.list2{
+   background:  hsla(39, 100%, 56%,0.1); /* Sets background color with transparency */
+   color:  hsl(39, 100%, 56%); /* Sets text color */
+}
+
+.list3{
+   background:  hsla(166, 100%, 37%,0.1); /* Sets background color with transparency */
+   color:  hsl(166, 100%, 37%); /* Sets text color */
 }
 
 .list4{
-    display: flex;
-    justify-content: space-around;
-    background:  hsla(234, 85%, 45%,0.1);
-    color:  hsl(234, 85%, 45%);
-    margin-bottom: 15px;
-    padding: 10px;
+   background:  hsla(234, 85%, 45%,0.1); /* Sets background color with transparency */
+   color:  hsl(234, 85%, 45%); /* Sets text color */
+   border-style: ; /* Removes border style */
 }
 
 .black{
-    font-weight: bold;
-    color: black;
+   font-weight: bold; /* Sets font weight to bold */
+   color: hsl(224, 30%, 27%); /* Sets text color */
 }
 
 .light{
-    font-weight: 400;
-    color: grey;
+   font-weight: 400; /* Sets font weight */
+   color: grey; /* Sets text color */
 }
 
 button{
-    border-radius: 20px;
-    padding: 10px;
-    font-weight: bold;
-    background: hsl(224, 30%, 27%);
-    color: hsl(0, 0%, 100%);
+   border-radius: 40px; /* Adds rounded corners */
+   font-size: 20px; /* Sets font size */
+   padding: 20px; /* Adds padding */
+   margin-top: 20px; /* Adds margin at the top */
+   font-weight: bold; /* Sets font weight to bold */
+   background: hsl(224, 30%, 27%); /* Sets background color */
+   color: hsl(0, 0%, 100%); /* Sets text color */
 }
 
 button:hover{
-    cursor: pointer;
-    background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
-    transition: 0.5s;
+   cursor: pointer; /* Changes cursor on hover */
+   background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)); /* Applies a gradient background on hover */
+   transition: 0.5s; /* Adds transition effect */
+}
+
+footer{
+   margin: 20px; /* Adds margin */
+   font-size: 50px; /* Sets font size */
+}
+
+.attribution {
+   font-size: 11px; /* Sets the font size */
+   text-align: center; /* Centers the text */
+ }
+
+ .attribution a {
+   color: hsl(228, 45%, 44%); /* Sets the color of links */
+ }
+
+/* mobile styles */
+
+body{
+   padding: 0; /* Resets padding */
+   margin: 0; /* Resets margin */
+}
+ 
+ .side-1{
+    color: hsl(0, 0%, 100%); /* Sets text color */
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)); /* Applies a gradient background */
+    padding: 20px; /* Adds padding */
+    border-radius: 0 0 20px 20px; /* Adds rounded corners */
+    margin: 0; /* Resets margin */
+    text-align: center; /* Centers the text */
+ }
+
+/* desktop styles 1440px */
+
+@media (min-width: 630px) {
+
+   body{
+      display: flex; /* Displays as a flexbox */
+      flex-flow: column wrap; /* Arranges items in a column and allows wrapping */
+      justify-content: center; /* Centers content vertically */
+      align-items: center; /* Centers content horizontally */
+      min-height: 100vh; /* Sets minimum height to 100% of viewport height */
+   }
+
+   main{
+      display: flex; /* Displays as a flexbox */
+      width: 600px; /* Sets width */
+      justify-content: center; /* Centers content horizontally */
+      border-radius: 20px; /* Adds rounded corners */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a shadow effect */
+   }  
+
+   .side-1{
+      color: hsl(0, 0%, 100%); /* Sets text color */
+      background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)); /* Applies a gradient background */
+      padding: 20px; /* Adds padding */
+      border-radius: 20px; /* Adds rounded corners */
+      width: 50%; /* Sets width */
+      text-align: center; /* Centers the text */
+   } 
+
+   .side-2{
+      width: 50%; /* Sets width */
+      padding: 20px; /* Adds padding */
+      border-radius: 20px; /* Adds rounded corners */
+   }  
 }

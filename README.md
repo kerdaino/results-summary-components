@@ -1,97 +1,226 @@
-# Frontend Mentor - Results summary component
+# Frontend Mentor - Results summary component solution
 
-![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+# Results Summary Component
 
-Thanks for checking out this front-end coding challenge.
+This project contains HTML and CSS code for a results summary component. This component is designed to display a user's test results in a visually appealing and user-friendly manner.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Table of Contents
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+- [Global Styles](#global-styles)
+- [Mobile Styles](#mobile-styles)
+- [Desktop Styles (1440px)](#desktop-styles-1440px)
+- [HTML Structure](#html-structure)
+- [Attribution](#attribution)
 
-## The challenge
+---
 
-Your challenge is to build out this results summary component and get it looking as close to the design as possible.
+## Global Styles
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+```css
+/* Global styles */
 
-We provide the data for the results in a local `data.json` file. So you can use that to add the results and total score dynamically if you choose.
+/* Set font family and size for the entire document */
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
 
-Your users should be able to:
+/* Set color for h4 and p elements */
+h4, p {
+    color: hsl(241, 100%, 89%);
+}
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- **Bonus**: Use the local JSON data to dynamically populate the content
+/* Set color for elements with class 'big' */
+.big {
+    color: hsl(0, 0%, 100%);
+}
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+/* Set color for h4 elements within .side-2 section */
+.side-2 h4 {
+    color: hsl(224, 30%, 27%);
+}
 
-## Where to find everything
+/* Styles for score element */
+.score {
+    padding: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 100%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+/* Styles for elements with class 'big' */
+.big {
+    font-weight: bold;
+    font-size: 60px;
+}
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+/* Styles for .side-2 section */
+.side-2 {
+    padding: 20px;
+    border-radius: 20px;
+}
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+/* Styles for list elements */
+.list {
+    display: flex;
+    flex-direction: column;
+}
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+/* Styles for list1, list2, list3, list4 elements */
+.list1, .list2, .list3, .list4 {
+    display: flex;
+    justify-content: space-around;
+    background: hsla(0, 100%, 67%, 0.1);
+    color: hsl(0, 100%, 67%);
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+}
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+/* Styles for .list2 element */
+.list2 {
+    background: hsla(39, 100%, 56%, 0.1);
+    color: hsl(39, 100%, 56%);
+}
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+/* Styles for .list3 element */
+.list3 {
+    background: hsla(166, 100%, 37%, 0.1);
+    color: hsl(166, 100%, 37%);
+}
 
-## Building your project
+/* Styles for .list4 element */
+.list4 {
+    background: hsla(234, 85%, 45%, 0.1);
+    color: hsl(234, 85%, 45%);
+    border-style: none;
+}
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+/* Styles for elements with class 'black' */
+.black {
+    font-weight: bold;
+    color: hsl(224, 30%, 27%);
+}
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+/* Styles for elements with class 'light' */
+.light {
+    font-weight: 400;
+    color: grey;
+}
 
-## Deploying your project
+/* Styles for buttons */
+button {
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    background: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+}
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+/* Hover styles for buttons */
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    transition: 0.5s;
+}
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+/* Styles for footer */
+footer {
+    margin: 20px;
+    font-size: 50px;
+}
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+/* Styles for attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
 
-## Create a custom `README.md`
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Mobile Styles
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```css
+/* Mobile styles */
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+/* Reset padding and margin for body */
+body {
+    padding: 0;
+    margin: 0;
+}
 
-## Submitting your solution
+/* Styles for .side-1 section on mobile */
+.side-1 {
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    margin: 0;
+    text-align: center;
+}
+```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## Desktop Styles (1440px)
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```css
+/* Desktop styles (1440px) */
 
-## Sharing your solution
+@media (min-width: 630px) {
 
-There are multiple places you can share your solution:
+    /* Flexbox styles for body */
+    body {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+    /* Styles for main section */
+    main {
+        display: flex;
+        width: 600px;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+    /* Styles for .side-1 section on desktop */
+    .side-1 {
+        color: hsl(0, 0%, 100%);
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        padding: 20px;
+        border-radius: 20px;
+        width: 50%;
+        text-align: center;
+    }
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+    /* Styles for .side-2 section on desktop */
+    .side-2 {
+        width: 50%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+}
+```
 
-## Got feedback for us?
+## HTML Structure
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+The HTML structure includes sections for displaying the user's result and a summary of the scores.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## Attribution
 
-**Have fun building!** 🚀
+This project was created as a challenge from [Frontend Mentor](https://www.frontendmentor.io?ref=challenge). Coded by [Tobi Adekunle (kerdaino dev)](https://kerdaino.github.io/portfolio/).
